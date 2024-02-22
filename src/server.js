@@ -6,18 +6,22 @@ const port = 8080
 const cors = require('cors');
 app.use((cors()))
 
-// this is a top-level await 
 const db = new sqlite3.Database('../LeagueOfLegends.db');
 app.get('/data', (req, res) => {
   const data = {};
-  db.all('SELECT * FROM Player', (err, rows) => {
-    if (err) {throw err;}
- 
-  data.player = rows;
-  
-  res.json(data)
-}) 
-})
+
+  // Query for Player data
+  db.all('SELECT Player.name, Rank.name AS rank_name FROM Player JOIN Rank ON Player.rank_id = Rank.id'
+  , (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    data.player = rows;
+    res.json(data);
+
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

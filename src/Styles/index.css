@@ -1,0 +1,39 @@
+    body{
+        width:100%;
+        background-image: url(bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .nav{
+        position: absolute;
+        width: 20%;
+        height:100%;
+        background-color: black;
+    }
+    .datalistCover{
+        border-radius: 30px;
+        position: absolute;
+        width: 45%;
+        height: 65%;
+        background-color: black;
+        top:20%;
+        left:28%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .datalist{
+        border-radius: 30px;
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background-color: white;
+        margin: auto;
+    }
+    #data-list div {
+        border: 1px solid #ccc;
+        margin: 5px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #f9f9f9;
+    }
