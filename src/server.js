@@ -11,7 +11,7 @@ app.get('/data', (req, res) => {
   const data = {};
 
   // Query for Player data
-  db.all('SELECT Player.name, Rank.name AS rank_name FROM Player JOIN Rank ON Player.rank_id = Rank.id'
+  db.all('SELECT Player.name AS player, Rank.name AS rank_name, KDA.kills AS kills, KDA.deaths AS deaths, KDA.assists AS assists, Champion.name AS champ, Skin.name AS skin FROM Player JOIN Rank ON Player.rank_id = Rank.id JOIN Player ON Rank.player_id = Player.id JOIN Champion ON KDA.champion_id = Champion.id' 
   , (err, rows) => {
     if (err) {
       throw err;
