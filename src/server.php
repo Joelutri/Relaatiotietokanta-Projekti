@@ -1,5 +1,6 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
 $databasePath = '../LeagueOfLegends.db';
 
 $db = new SQLite3($databasePath);
@@ -8,7 +9,7 @@ if (!$db) {
     die("Failed to open database.");
 }
 
-$query = 'SELECT Player.name, Rank.name FROM Player, Rank WHERE Player.rank_id = Rank.id';
+$query = 'SELECT Player.name AS player, Rank.name AS rank FROM Player, Rank WHERE Player.rank_id = Rank.id';
 
 $result = $db->query($query);
 
