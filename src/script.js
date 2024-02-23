@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('http://localhost:8080/data')
+  fetch('https://projectdatabase.azurewebsites.net/src/server.php')
       .then(response => response.json())
       .then(data => {
 

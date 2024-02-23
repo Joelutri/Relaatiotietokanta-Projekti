@@ -1,24 +1,26 @@
 <?php
 
-$db = new SQLite3('../LeagueOfLegends.db');
+$databasePath = '../LeagueOfLegends.db';
 
-$app = new \Slim\App();
+$db = new SQLite3($databasePath);
 
-$app->add(function ($request, $response, $next) {
-    $response = $response->withHeader('Access-Control-Allow-Origin', '*');
-    return $next($request, $response);
-});
+if (!$db) {
+    die("Failed to open database.");
+}
 
-$app->get('/data', function ($request, $response, $args) use ($db) {
-    $data = array();
+$query = 'SELECT Player.name, Rank.name FROM Player, Rank WHERE Player.rank_id = Rank.id';
 
-    $playerQuery = 'SELECT Player.name, Rank.name AS rank_name FROM Player JOIN Rank ON Player.rank_id = Rank.id';
-    $playerResult = $db->query($playerQuery);
-    while ($row = $playerResult->fetchArray(SQLITE3_ASSOC)) {
-        $data['player'][] = $row;
-    }
+$result = $db->query($query);
 
-    return $response->withJson($data);
-});
+if (!$result) {
+    die("Error in query execution.");
+}
 
-$app->run();
+$data = array();
+while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+    $data['player'][] = $row;
+}
+
+$db->close();
+
+echo json_encode($data);
