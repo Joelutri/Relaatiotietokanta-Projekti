@@ -1,0 +1,146 @@
+.datalistCover {
+    z-index: 10;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    height: 600px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#games_div {
+    z-index: 9;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgb(156, 156, 156);
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.usernameDiv {
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    font-size: 18px;
+}
+
+.usernameTXT {
+    font-size: 27px;
+    border-bottom: 5px double;
+}
+
+.rankDiv {
+    position: absolute;
+    top: 8px;
+    right: 40px;
+}
+
+.rankTXT {
+    font-size: 27px;
+}
+
+.rankvalueTXT {
+    font-size: 23px;
+    text-align: center;
+}
+
+.matchesDiv {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    display: flex;
+}
+
+.matchesTXT {
+    font-size: 23px;
+}
+
+.matchesValue {
+    font-size: 23px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.championBG {
+    background-color: rgb(156, 156, 156);
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    font-size: 18px;
+    left: 20px;
+    text-align: center;
+}
+
+.championDiv {
+    position: absolute;
+    text-align: center;
+    left: 2%;
+}
+
+.championTXT {
+    font-size: 23px;
+}
+
+.championName {
+    font-size: 20px;
+    text-align: center;
+}.skinDiv {
+    position: absolute;
+    text-align: center;
+    left: 42%;
+}
+
+.skinTXT {
+    font-size: 23px;
+}
+
+.skinName {
+    font-size: 20px;
+    text-align: center;
+}
+
+.KDA {
+    display: flex;
+    left: 68%;
+    position: absolute;
+    top: 20%;
+}
+
+.KName {
+    position: absolute;
+    top: -25%;
+    left: 12%;
+}
+
+.DName {
+    position: absolute;
+    top: -25%;
+    left: 45%;
+}
+
+.AName {
+    position: absolute;
+    top: -25%;
+    left: 78%;
+}
+
+.KDAValue {
+    font-size: 18px;
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(0, 0, 0); 
+}

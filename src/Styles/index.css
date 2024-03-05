@@ -1,16 +1,34 @@
     body{
         width:100%;
+        height: 100%;
         background-image: url(bg.png);
+        background-repeat: no-repeat;
+        background-size:100%;
+        overflow: hidden;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        max-width: 400px; 
+        height: 100vh; 
+        background-image: url(nav.png);
         background-repeat: no-repeat;
         background-size: cover;
     }
-    .nav{
+    .backButton{
         position: absolute;
-        width: 20%;
-        height:100%;
-        background-color: black;
+        top:35px;
+        left: 50px;
+        padding: 10px 15px;
+        background-color: white;
+        z-index: 15;
+        display: none;
+        border-radius: 25%;
     }
     .datalistCover{
+        z-index: 10;
         border-radius: 30px;
         position: absolute;
         width: 45%;
@@ -23,17 +41,192 @@
         justify-content: center;
     }
     .datalist{
+        z-index: 10;
         border-radius: 30px;
         position: absolute;
         width: 90%;
-        height: 90%;
+        max-height: 90%;
         background-color: white;
         margin: auto;
+        overflow: auto; 
+        scroll-behavior: smooth; 
     }
     #data-list div {
         border: 1px solid #ccc;
         margin: 5px;
         padding: 10px;
         cursor: pointer;
-        background-color: #f9f9f9;
+        background-color: #fffbfb;
+    }
+
+    #games {
+        z-index: 9;
+        position: absolute;
+        border-radius: 10px;
+        width: 90%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .gamesDiv{
+        z-index: 12;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        overflow: auto; 
+        scroll-behavior: smooth; 
+    }
+    .logo{
+        position: fixed;
+        top: 80%; 
+        left: 5%; 
+        width: 7%;
+    }
+    .playerName{
+        font-size: xx-large;
+    }
+    .playerRank{
+        font-size: x-large;
+    }
+    /*start of hell*/
+
+    .usernameDiv {
+        position: absolute;
+        top: 8px;
+        left: 80px;
+        font-size: 18px;
+    }
+    .usernameTXT {
+        font-size: 27px;
+        border-bottom: 5px double;
+    }
+    .rankDiv {
+        position: absolute;
+        top: 8px;
+        right: 120px;
+    }
+    
+    .rankTXT {
+        font-size: 27px;
+    }
+    
+    .rankvalueTXT {
+        font-size: 23px;
+        text-align: center;
+    }
+    
+    .matchesDiv {
+        position: absolute;
+        top: 60px;
+        left: 50px;
+        display: flex;
+    }
+    
+    .matchesTXT {
+        font-size: 23px;
+    }
+    
+    .matchesValue {
+        font-size: 23px;
+        text-align: center;
+        margin-left: 5px;
+    }
+    .championBG {
+        background-color: rgb(156, 156, 156);
+        width: 90%;
+        height: 100px;
+        position: absolute;
+        font-size: 18px;
+        left: 20px;
+        text-align: center;
+    }
+    .championBG:nth-child(1) {
+        top: 130px;
+    }
+    .championBG:nth-child(2) {
+        top: 250px;
+    }
+    .championBG:nth-child(3) {
+        top: 370px;
+    }
+    .championBG:nth-child(4) {
+        top: 490px;
+    }
+    .championBG:nth-child(5) {
+        top: 610px;
+    }
+    .championBG:nth-child(6) {
+        top: 730px;
+    }
+    .championBG:nth-child(7) {
+        top: 850px;
+    }
+    .championDiv {
+        position: absolute;
+        text-align: center;
+        left: 2%;
+    }
+    
+    .championTXT {
+        font-size: 23px;
+    }
+    
+    .championName {
+        font-size: 20px;
+        text-align: center;
+    }
+    .skinDiv {
+        position: absolute;
+        text-align: center;
+        left: 42%;
+    }
+    
+    .skinTXT {
+        font-size: 23px;
+    }
+    
+    .skinName {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .KDA {
+        display: flex;
+        left: 68%;
+        position: absolute;
+        top: 20%;
+    }
+    
+    .KName {
+        font-size: 25px;
+        position: absolute;
+        top: -45%;
+        left: 8%;
+    }
+    
+    .DName {
+        font-size: 25px;
+        position: absolute;
+        top: -45%;
+        left: 43%;
+    }
+    
+    .AName {
+        font-size: 25px;
+        position: absolute;
+        top: -45%;
+        left: 76%;
+    }
+    
+    .KDAValue {
+        font-size: 18px;
+        background-color: rgb(255, 255, 255);
+        width: 35px;
+        height: 35px;
+        border: 2px solid rgb(0, 0, 0); 
     }
