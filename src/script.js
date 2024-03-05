@@ -1,6 +1,6 @@
 //fetch data and sends it foward
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://localhost:6969/server.php')
+    fetch('https://projectdatabase.azurewebsites.net/src/server.php')
         .then(response => response.json())
         .then(data => {
             const dataListElement = document.getElementById('data-list');
