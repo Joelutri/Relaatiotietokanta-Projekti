@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dev tools</title>
+        <script src="../post.js"></script>
+        <link rel="stylesheet" href="../Styles/index.css">
+    </head>
+    <body>
+       
+        <div id="game">
+            <div class="nav">
+                <div class="navButton"><div class="navIcon"></div><a href="./post.html">New Game</a></div>
+                <div class="navButton"><div class="navIcon"></div><a href="./index.html">Players</a></div>
+                <div class="navButton"><div id="chosenOne" class="navIcon"></div><a href="./devPost.html">Dev tools</a></div>
+                <img src="../Styles/logos.png" class="logo">
+                <img src="../Styles/logo2nd.png" class="logo2nd">
+            </div>
+            <div class="datalistCover">
+                <div class="fillerScreen">
+                    <div class="mainScreen" id="mainScreen">
+                        <h1>Dev tools</h1>
+                        <div class="postDiv">
+                            Create new rank
+                            <input class="postPrompt" onclick="addNewRank()" type="submit" value="New Rank">
+                            Create new Champion
+                            <input class="postPrompt" onclick="addNewChampion()" type="submit" value="New Champion"  >
+                            Create new Skin
+                            <input class="postPrompt" onclick="addNewSkin()" type="submit" value="New Skin" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

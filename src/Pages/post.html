@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Play Game</title>
+        <script src="../post.js"></script>
+        <link rel="stylesheet" href="../Styles/index.css">
+    </head>
+    <body>
+       
+        <div id="game">
+            <div class="nav">
+                <div class="navButton"><div id="chosenOne" class="navIcon"></div><a href="./post.html">New Game</a></div>
+                <div  class="navButton"><div  class="navIcon"></div><a href="./index.html">Players</a></div>
+                <div class="navButton"><div class="navIcon"></div><a href="./devPost.html">Dev tools</a></div>
+                <img src="../Styles/logos.png" class="logo">
+            </div>
+            <div class="datalistCover">
+                <div class="fillerScreen">
+                    <div class="mainScreen" id="mainScreen">
+                        <h1>Create new game</h1>
+                        <div class="postDiv">
+                            <input class="postInput" id="championNameInput" placeholder="Champion name" type="text" >
+                            <input class="postInput" id="playerNameInput"  placeholder="Player name" type="text" >
+                            <input class="postInput" id="skinNameInput"  placeholder="Skin name" type="text" >
+                            <input class="postSubmit" onclick="addNewGame()" type="submit" value="Send">
+                        </div>
+                        <div>Dont have account? <button class="linkTXT" onclick="createPlayerScreen()">Create player</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

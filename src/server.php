@@ -31,22 +31,22 @@ while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
     $kdaResult = $db->query($kdaQuery);
 
     if (!$kdaResult) {
-        die(json_encode(array('error' => 'Error in KDA query execution: ' . $db->lastErrorMsg())));
+        die(json_encode(array('error' => 'Error in KDA query: ' . $db->lastErrorMsg())));
     }
 
     $kdaData = array();
     while ($kdaRow = $kdaResult->fetchArray(SQLITE3_ASSOC)) {
         $champion = $kdaRow['name'];
-        $kdaData[$champion] = array(
+        $kdaData[] = array(
+            'champion' => $champion,
             'kills' => $kdaRow['kills'],
             'deaths' => $kdaRow['deaths'],
             'assists' => $kdaRow['assists'],
             'skin' => $kdaRow['skin'] ?: 'default'
         );
     }
-
-    $row['kda'] = $kdaData;
-
+    
+    $row['kda'] = $kdaData;    
     $data['players'][] = $row;
 }
 
