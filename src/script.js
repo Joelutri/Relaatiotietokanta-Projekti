@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://projectdatabase.azurewebsites.net/src/server.php')
+    fetch('http://localhost:6969/server.php')
         .then(response => response.json())
         .then(data => {
             const dataListElement = document.getElementById('data-list');

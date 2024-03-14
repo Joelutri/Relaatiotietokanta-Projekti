@@ -6,7 +6,7 @@ function addNewRank() {
 
 
     // Make POST request to add new rank
-    fetch('https://projectdatabase.azurewebsites.net/src/post.php', {
+    fetch('http://localhost:6969/post.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ function addNewPlayer() {
     const rankName = document.getElementById('rankNameInput').value; 
 
     // Make POST request to add new player
-    fetch('https://projectdatabase.azurewebsites.net/src/post.php?table=Player', {
+    fetch('http://localhost:6969/post.php?table=Player', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ function addNewGame() {
     const skinName = document.getElementById('skinNameInput').value; 
 
     // Make POST request to add new game
-    fetch('https://projectdatabase.azurewebsites.net/src/post.php?table=KDA', {
+    fetch('http://localhost:6969/post.php?table=KDA', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ function addNewChampion() {
     const newChampion = prompt('New Champion');
 
     // Make POST request to add new champion
-    fetch('https://projectdatabase.azurewebsites.net/src/post.php?table=Champion', {
+    fetch('http://localhost:6969/post.php?table=Champion', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ function addNewSkin() {
     const newSkin = prompt('New Skin');
 
     // Make POST request to add new skin
-    fetch('https://projectdatabase.azurewebsites.net/src/post.php?table=Skin', {
+    fetch('http://localhost:6969/post.php?table=Skin', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ function createPlayerScreen() {
             <div class="postDiv">
                 <input class="postInput" id="playerName" placeholder="Player name" type="text">
                 <input class="postInput" id="rankNameInput"  placeholder="Rank name" type="text" >
-                <input class="postSubmit" onclick="addNewPlayer()" type="submit" value="Send" >
+                <input class="postSubmit" id="newPlayer" onclick="addNewPlayer()" type="submit" value="Send" >
             </div>
         </div
     `
