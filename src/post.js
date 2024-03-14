@@ -129,7 +129,7 @@ function createPlayerScreen() {
             <div class="postDiv">
                 <input class="postInput" id="playerName" placeholder="Player name" type="text">
                 <input class="postInput" id="rankNameInput"  placeholder="Rank name" type="text" >
-                <input class="postSubmit" onclick="addNewPlayer()" type="submit" value="Send" >
+                <input class="postSubmit" id="newPlayer" onclick="addNewPlayer()" type="submit" value="Send" >
             </div>
         </div
     `
